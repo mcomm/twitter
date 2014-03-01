@@ -1,4 +1,11 @@
 Twitter::Application.routes.draw do
+
+  devise_for :users
+  root 'welcome#index'
+
+
+  get "welcome/index"
+  get "welcome/about"
   resources :comments
 
   resources :tweets
